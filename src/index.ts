@@ -11,9 +11,7 @@ const PORT = parseInt(process.env.PORT, 10);
 
 const app = express();
 
-
-app.get('/', (req, res) => res.send("Initial Server"));
-
+app.get('/', (req, res) => res.send('Initial Server'));
 
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
