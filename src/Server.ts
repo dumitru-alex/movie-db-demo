@@ -1,7 +1,10 @@
 import express from 'express';
+import BaseRouter from './routes';
 
 const app = express();
 
-app.get('/', (_req, res) => res.send('Initial Server'));
+// Add APIs
+app.use('/api', BaseRouter);
 
+// Export express instance
 export default app;
