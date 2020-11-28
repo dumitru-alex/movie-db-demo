@@ -1,9 +1,9 @@
 import { Router } from 'express';
+import { router as movieRouter } from './Movies';
 
 const router = Router();
 
 // Add sub-routes
-router.use('/test', (_req, res) => {
-  res.status(200).json({ status: '200', message: 'TEST' });
-});
+router.use('/movies', movieRouter);
+
 export default router;

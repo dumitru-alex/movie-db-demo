@@ -3,6 +3,8 @@ import BaseRouter from './routes';
 
 const app = express();
 
+app.use(express.json());
+
 // Add APIs
 app.use('/api', BaseRouter);
 
