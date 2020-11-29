@@ -1,9 +1,8 @@
 import mongoose from 'mongoose';
+import { Comment } from '../../doc/Comment';
 
-interface Comment extends mongoose.Document {
-  author: string,
-  context: string
-}
+type CommentDocument = Comment & mongoose.Document
+
 const CommentModel = new mongoose.Schema({
   author: {
     type: String,
@@ -15,4 +14,4 @@ const CommentModel = new mongoose.Schema({
   },
 });
 
-export default mongoose.model<Comment>('Comment', CommentModel);
+export default mongoose.model<CommentDocument>('Comment', CommentModel);

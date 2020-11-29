@@ -1,4 +1,7 @@
 import mongoose from 'mongoose';
+import { Movie } from '../../doc/Movie';
+
+type MovieDocument = Movie & mongoose.Document
 
 const MovieSchema = new mongoose.Schema({
   IMDb: {
@@ -17,4 +20,4 @@ const MovieSchema = new mongoose.Schema({
   },
 });
 
-export default mongoose.model('Movie', MovieSchema);
+export default mongoose.model<MovieDocument>('Movie', MovieSchema);
