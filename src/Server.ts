@@ -3,6 +3,7 @@ import BaseRouter from './routes';
 
 const app = express();
 
+// Middleware
 app.use(express.json());
 
 // Add APIs
