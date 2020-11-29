@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
 import { Movie } from '../../doc/Movie';
 
-type MovieDocument = Movie & mongoose.Document
+type MovieDocument = Movie & mongoose.Document;
 
 const MovieSchema = new mongoose.Schema({
   IMDb: {
