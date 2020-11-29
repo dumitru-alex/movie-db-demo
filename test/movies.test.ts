@@ -5,7 +5,7 @@ import server from '../src/Server';
 const expect = chai.expect;
 chai.use(chaiHttp);
 
-describe('Test /movies endpoint', function () {
+describe.skip('Test /movies endpoint', function () {
   it('should GET /api/movies', async function () {
     const res = await chai.request(server).get('/api/movies');
     expect(res.status).to.equal(200);
@@ -18,11 +18,11 @@ describe('Test /movies endpoint', function () {
       .request(server)
       .post('/api/movies')
       .send({
-        "movie": {
-          "IMDb": '1235',
-          "title": 'Die Hard 5',
-          "plot": 'hard to kill 5',
-          "type": 'movie',
+        movie: {
+          IMDb: '1235',
+          title: 'Die Hard 5',
+          plot: 'hard to kill 5',
+          type: 'movie',
         },
       });
     expect(res.status).to.equal(201);

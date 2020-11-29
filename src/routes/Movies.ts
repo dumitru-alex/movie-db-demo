@@ -15,7 +15,7 @@ router.get('/', async (_req, res) => {
 
 router.post('/', async (req, res) => {
   if (!req.body) {
-    res.status(400).json({message: 'Request body is missing.'});
+    res.status(400).json({ message: 'Request body is missing.' });
   }
   try {
     await MovieService.create(req.body.movie).save((err, document) => {
