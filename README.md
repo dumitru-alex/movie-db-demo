@@ -49,12 +49,12 @@ curl http://localhost:7000/api/movies | node -e "console.log( JSON.stringify( JS
 ```
 curl -X POST -H 'Content-Type: application/json' -d '{
   "movie":{
-    "IMDb": "1235",
+    "IMDb": "tt1235",
     "name": "Die Hard 5",
     "plot": "hard to kill 5",
     "type": "movie"
   }
-}' http://localhost:<PORT>/movies
+}' http://localhost:<PORT>/api/movies
 ```
 
 ex:
@@ -62,12 +62,12 @@ ex:
 ```
 curl -X POST -H 'Content-Type: application/json' -d '{
   "movie":{
-    "IMDb": "1235",
+    "IMDb": "tt1235",
     "name": "Die Hard 5",
     "plot": "hard to kill 5",
     "type": "movie"
   }
-}' http://localhost:7000/movies
+}' http://localhost:7000/api/movies
 ```
 
 ### Comments

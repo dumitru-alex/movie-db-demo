@@ -9,14 +9,22 @@ const MovieSchema = new mongoose.Schema({
     required: true,
     unique: true,
   },
-  title: {
+  Title: {
     type: String,
     required: true,
   },
-  type: {
+  Type: {
     type: String,
     required: true,
     enum: ['movie', 'series', 'episode'],
+  },
+  Genre: {
+    type: String,
+    required: true,
+  },
+  Plot: {
+    type: String,
+    required: true,
   },
 });
 

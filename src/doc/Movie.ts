@@ -1,9 +1,9 @@
 export interface Movie {
   IMDb: string;
-  title: string;
-  type?: MovieType;
-  plot?: Plot;
+  Title: string;
+  Type: MovieType;
+  Genre: string;
+  Plot: string;
 }
 
 type MovieType = 'movie' | 'series' | 'episode';
-type Plot = 'short' | 'full';
