@@ -5,7 +5,7 @@ import { router as commentRouter } from './Comments';
 const router = Router();
 
 // Add sub-routes
-router.use('/movies', movieRouter);
-router.use('/comments', commentRouter);
+router.use('/v1/movies', movieRouter);
+router.use('/v1/comments', commentRouter);
 
 export default router;

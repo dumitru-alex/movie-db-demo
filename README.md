@@ -23,25 +23,25 @@ To start in watch mode, use:
 `GET /movies`
 
 ```
-curl http://localhost:<PORT>/api/movies
+curl http://localhost:<PORT>/api/v1/movies
 ```
 
 ex:
 
 ```
-curl http://localhost:7000/api/movies
+curl http://localhost:7000/api/v1/movies
 ```
 
 To format the output, use:
 
 ```
-curl http://localhost:<PORT>/api/movies | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
+curl http://localhost:<PORT>/api/v1/movies | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
 ```
 
 ex:
 
 ```
-curl http://localhost:7000/api/movies | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
+curl http://localhost:7000/api/v1/movies | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
 ```
 
 `POST /movies`
@@ -55,7 +55,7 @@ curl -X POST -H 'Content-Type: application/json' -d '{
     "Type": "",
     "Genre: ""
   }
-}' http://localhost:<PORT>/api/movies
+}' http://localhost:<PORT>/api/v1/movies
 ```
 
 ex:
@@ -69,7 +69,7 @@ curl -X POST -H 'Content-Type: application/json' -d '{
     "Type": "movie",
     "Genre: "Action"
   }
-}' http://localhost:7000/api/movies
+}' http://localhost:7000/api/v1/movies
 ```
 
 ### Comments
@@ -77,25 +77,25 @@ curl -X POST -H 'Content-Type: application/json' -d '{
 `GET /comments`
 
 ```
-curl http://localhost:<PORT>/api/comments
+curl http://localhost:<PORT>/api/v1/comments
 ```
 
 ex:
 
 ```
-curl http://localhost:7000/api/comments
+curl http://localhost:7000/api/v1/comments
 ```
 
 To format the output, use:
 
 ```
-curl http://localhost:<PORT>/api/comments | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
+curl http://localhost:<PORT>/api/v1/comments | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
 ```
 
 ex:
 
 ```
-curl http://localhost:7000/api/comments | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
+curl http://localhost:7000/api/v1/comments | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
 ```
 
 `POST /comments`
@@ -106,7 +106,7 @@ curl -X POST -H 'Content-Type: application/json' -d '{
     "author": "",
     "context": ""
   }
-}' http://localhost:<PORT>/api/comments
+}' http://localhost:<PORT>/api/v1/comments
 ```
 
 ex:
@@ -117,5 +117,5 @@ curl -X POST -H 'Content-Type: application/json' -d '{
     "author": "Alex",
     "context": "some comment"
   }
-}' http://localhost:7000/api/comments
+}' http://localhost:7000/api/v1/comments
 ```
