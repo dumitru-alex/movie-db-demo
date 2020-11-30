@@ -49,10 +49,11 @@ curl http://localhost:7000/api/movies | node -e "console.log( JSON.stringify( JS
 ```
 curl -X POST -H 'Content-Type: application/json' -d '{
   "movie":{
-    "IMDb": "tt1235",
-    "name": "Die Hard 5",
-    "plot": "hard to kill 5",
-    "type": "movie"
+    "IMDb": "",
+    "Title": "",
+    "Plot": "",
+    "Type": "",
+    "Genre: ""
   }
 }' http://localhost:<PORT>/api/movies
 ```
@@ -63,9 +64,10 @@ ex:
 curl -X POST -H 'Content-Type: application/json' -d '{
   "movie":{
     "IMDb": "tt1235",
-    "name": "Die Hard 5",
-    "plot": "hard to kill 5",
-    "type": "movie"
+    "Title": "Die Hard 5",
+    "Plot": "hard to kill 5",
+    "Type": "movie",
+    "Genre: "Action"
   }
 }' http://localhost:7000/api/movies
 ```
@@ -101,8 +103,8 @@ curl http://localhost:7000/api/comments | node -e "console.log( JSON.stringify( 
 ```
 curl -X POST -H 'Content-Type: application/json' -d '{
   "comment":{
-    "author": "Alex",
-    "context": "some comment"
+    "author": "",
+    "context": ""
   }
 }' http://localhost:<PORT>/api/comments
 ```

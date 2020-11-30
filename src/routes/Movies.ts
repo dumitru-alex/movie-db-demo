@@ -23,13 +23,14 @@ router.post('/', async (req, res) => {
   let movie = req.body.movie;
   // TODO move this out
   if (!instanceOfMovie(movie)) {
-    const omdbResponse = await axios.get(`http://www.omdbapi.com/?i=${movie.IMDb}&apikey=${process.env.OMDB_API_KEY}`)
+    const omdbResponse = await axios.get(
+      `http://www.omdbapi.com/?i=${movie.IMDb}&apikey=${process.env.OMDB_API_KEY}`
+    );
 
     if (omdbResponse.data.Response === 'False') {
-      return res.status(400).send(omdbResponse.data.Error)
+      return res.status(400).send(omdbResponse.data.Error);
     }
     movie = { ...omdbResponse.data, ...movie };
-
   }
   try {
     const document = await MovieService.create(movie);
