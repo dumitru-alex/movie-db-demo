@@ -64,6 +64,9 @@ curl http://localhost:7000/api/v1/movies | node -e "console.log( JSON.stringify(
 ```
 
 `POST /movies`
+- `IMDb` is mandatory. 
+- `IMDb` format is usually *ttxxxxxx* (i.e. tt10048342)
+- All other properties are optional and will be fetched from http://www.omdbapi.com/
 
 ```
 curl -X POST -H 'Content-Type: application/json' -d '{
@@ -138,3 +141,9 @@ curl -X POST -H 'Content-Type: application/json' -d '{
   }
 }' http://localhost:7000/api/v1/comments
 ```
+
+## Next steps
+
+- add FILTERING / SORTING / PAGING
+- role base Authorization
+- add SSL/TLS layer
