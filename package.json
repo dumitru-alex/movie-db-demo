@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "node ./out/src",
     "start:dev": "nodemon src/index.ts",
     "build": "tsc --project ./",
     "test:dev": "nodemon --watch . --ext ts --exec \"mocha -r ts-node/register ./test/**/*test.ts\"",

@@ -42,7 +42,7 @@ To start in watch mode, use:
 `GET /movies`
 
 ```
-curl http://localhost:<PORT>/api/v1/movies
+curl http://<HOST>:<PORT>/api/v1/movies
 ```
 
 ex:
@@ -54,7 +54,7 @@ curl http://localhost:7000/api/v1/movies
 To format the output, use:
 
 ```
-curl http://localhost:<PORT>/api/v1/movies | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
+curl http://<HOST>:<PORT>/api/v1/movies | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
 ```
 
 ex:
@@ -74,7 +74,7 @@ curl -X POST -H 'Content-Type: application/json' -d '{
     "Type": "",
     "Genre: ""
   }
-}' http://localhost:<PORT>/api/v1/movies
+}' http://<HOST>:<PORT>/api/v1/movies
 ```
 
 ex:
@@ -96,7 +96,7 @@ curl -X POST -H 'Content-Type: application/json' -d '{
 `GET /comments`
 
 ```
-curl http://localhost:<PORT>/api/v1/comments
+curl http://<HOST>:<PORT>/api/v1/comments
 ```
 
 ex:
@@ -108,7 +108,7 @@ curl http://localhost:7000/api/v1/comments
 To format the output, use:
 
 ```
-curl http://localhost:<PORT>/api/v1/comments | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
+curl http://<HOST>:<PORT>/api/v1/comments | node -e "console.log( JSON.stringify( JSON.parse(require('fs').readFileSync(0) ), 0, 2 ))"
 ```
 
 ex:
@@ -125,7 +125,7 @@ curl -X POST -H 'Content-Type: application/json' -d '{
     "author": "",
     "context": ""
   }
-}' http://localhost:<PORT>/api/v1/comments
+}' http://<HOST>:<PORT>/api/v1/comments
 ```
 
 ex:

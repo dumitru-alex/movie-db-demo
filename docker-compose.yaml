@@ -1,0 +1,14 @@
+version: '3'
+networks:
+  api_server_default:
+    external: true
+
+services:
+  microservice-movie-db:
+    networks:
+      - api_server_default
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - 8080:8080
