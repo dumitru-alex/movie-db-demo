@@ -4,13 +4,11 @@ import mongoose from 'mongoose';
 
 dotenv.config();
 
-if (!process.env.PORT) {
-  process.exit(1);
-}
-const PORT = parseInt(process.env.PORT, 10);
+const PORT = parseInt((process.env.PORT || "8080"), 10);
 const uri = `mongodb+srv://${process.env.ATLAS_USER}:${process.env.ATLAS_PWD}@${process.env.ATLAS_CLUSTER}/${process.env.ATLAS_DB}?retryWrites=true&w=majority`;
 const options = { useNewUrlParser: true, useUnifiedTopology: true };
 mongoose.set('useFindAndModify', false);
+mongoose.set('useCreateIndex', true);
 
 mongoose
   .connect(uri, options)
