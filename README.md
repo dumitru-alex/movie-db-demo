@@ -1,3 +1,22 @@
+## Pre-reqs
+
+1. MongoDB Atlas connection
+
+- fill in the following details in a .env file:
+```
+OMDB_API_KEY=''  
+ATLAS_USER=''  
+ATLAS_PWD=''  
+ATLAS_CLUSTER=''  
+ATLAS_DB=''
+```
+In Atlas, when you create a cluster and try to connect to it, you will be presented with a link resembling the one below. Use this as reference to fill in the environment variables
+`mongodb+srv://<ATLAS_USER>:<ATLAS_PWD>@<ATLAS_CLUSTER>/<ATLAS_DB>?retryWrites=true&w=majority`
+
+## Live app:
+
+http://moviedb-alex-demo.herokuapp.com
+
 ## Build & Start
 
 ### Install dependencies
