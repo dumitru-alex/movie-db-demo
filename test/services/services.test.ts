@@ -22,14 +22,14 @@ describe('Service tests', () => {
   describe('Comments service', () => {
     const comment: Comment = { author: 'author', context: 'context' };
 
-    it('can create comment', async () => {
+    it('should create comment', async () => {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { _id, __v, ...commentResponse } = (
         await CommentService.create(comment)
       ).toJSON();
       expect(commentResponse).to.deep.equal(comment);
     });
-    it('can retrieve comments', async () => {
+    it('should retrieve comments', async () => {
       expect(CommentService.create(comment)).to.not.throw;
       const commentResponse = await CommentService.getAll();
       expect(commentResponse).to.deep.equal([comment]);
@@ -43,14 +43,14 @@ describe('Service tests', () => {
       Title: 'title',
       Type: 'movie',
     };
-    it('can create movie', async () => {
+    it('should create movie', async () => {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
       const { _id, __v, ...movieResponse } = (
         await MovieService.create(movie)
       ).toJSON();
       expect(movieResponse).to.deep.equal(movie);
     });
-    it('can retrieve movies', async () => {
+    it('should retrieve movies', async () => {
       expect(MovieService.create(movie)).to.not.throw;
       const movieResponse = await MovieService.getAll();
       expect(movieResponse).to.deep.equal([movie]);
