@@ -147,5 +147,3 @@ curl -X POST -H 'Content-Type: application/json' -d '{
 - add FILTERING / SORTING / PAGING
 - role base Authorization
 - add SSL/TLS layer
-- fix tests :grimacing:
-- make tests run independent of Atlas :worried:
