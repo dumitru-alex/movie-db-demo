@@ -17,25 +17,6 @@ export const connectDb = async (): Promise<void> => {
 
   mongoose.connect(uri, mongooseOpts);
 };
-// export const connectDbandStartServer = async (
-//   server: Express
-// ): Promise<void> => {
-//   const uri = await mongoDb.getUri('testDb');
-
-//   const mongooseOpts: mongoose.ConnectionOptions = {
-//     useNewUrlParser: true,
-//     useUnifiedTopology: true,
-//     useCreateIndex: true,
-//   };
-
-//   mongoose
-//     .connect(uri, mongooseOpts)
-//     .then(() =>
-//       app.listen('5555', () =>
-//         console.log(`Server running on http://localhost:${5555}`)
-//       )
-//     );
-// };
 
 // Drop, close and stop db
 
