@@ -3,13 +3,15 @@
 1. MongoDB Atlas connection
 
 - fill in the following details in a .env file:
+
 ```
-OMDB_API_KEY=''  
-ATLAS_USER=''  
-ATLAS_PWD=''  
-ATLAS_CLUSTER=''  
+OMDB_API_KEY=''
+ATLAS_USER=''
+ATLAS_PWD=''
+ATLAS_CLUSTER=''
 ATLAS_DB=''
 ```
+
 In Atlas, when you create a cluster and try to connect to it, you will be presented with a link resembling the one below. Use this as reference to fill in the environment variables
 `mongodb+srv://<ATLAS_USER>:<ATLAS_PWD>@<ATLAS_CLUSTER>/<ATLAS_DB>?retryWrites=true&w=majority`
 
@@ -64,8 +66,9 @@ curl http://localhost:7000/api/v1/movies | node -e "console.log( JSON.stringify(
 ```
 
 `POST /movies`
-- `IMDb` is mandatory. 
-- `IMDb` format is usually *ttxxxxxx* (i.e. tt10048342)
+
+- `IMDb` is mandatory.
+- `IMDb` format is usually _ttxxxxxx_ (i.e. tt10048342)
 - All other properties are optional and will be fetched from http://www.omdbapi.com/
 
 ```

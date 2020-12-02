@@ -75,10 +75,10 @@ describe('Routes tests', () => {
         .send({ comment: comment })
         .end((err, res) => {
           // eslint-disable-next-line @typescript-eslint/no-unused-vars
-          const { _id, __v, ...commentResponse } = res.body.comment
+          const { _id, __v, ...commentResponse } = res.body.comment;
           expect(err).to.be.null;
           expect(res).to.have.status(201);
-          expect(commentResponse).to.deep.equal(comment)
+          expect(commentResponse).to.deep.equal(comment);
         });
     });
   });
