@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Movie } from '../../doc/Movie';
+import { Movie } from '../doc/Movie';
 
 type MovieDocument = Movie & mongoose.Document;
 

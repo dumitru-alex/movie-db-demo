@@ -1,5 +1,5 @@
 import { Movie } from '../doc/Movie';
-import MovieModel from './models/movieModel';
+import MovieModel from '../models/movieModel';
 import { Document } from 'mongoose';
 
 export const getAll = async (): Promise<Movie[]> =>

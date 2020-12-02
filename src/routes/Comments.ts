@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import * as CommentService from '../daos/Comment';
+import * as CommentService from '../services/Comment';
 
 export const router = Router();
 

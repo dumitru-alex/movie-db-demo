@@ -1,7 +1,7 @@
 import chai from 'chai';
 import chaiHttp from 'chai-http';
-import server from '../src/Server';
-import * as CommentService from '../src/daos/Comment';
+import server from '../../src/Server';
+import * as CommentService from '../../src/services/Comment';
 import sinon from 'sinon';
 
 const expect = chai.expect;

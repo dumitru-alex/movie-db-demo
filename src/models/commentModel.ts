@@ -1,7 +1,7 @@
 import mongoose from 'mongoose';
-import { Comment } from '../../doc/Comment';
+import { Comment } from '../doc/Comment';
 
-type CommentDocument = Comment & mongoose.Document;
+export type CommentDocument = Comment & mongoose.Document;
 
 const CommentModel = new mongoose.Schema({
   author: {

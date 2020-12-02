@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import * as MovieService from '../daos/Movie';
+import * as MovieService from '../services/Movie';
 import dotenv from 'dotenv';
 import { Movie } from '../doc/Movie';
 import axios from 'axios';

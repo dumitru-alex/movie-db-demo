@@ -1,5 +1,5 @@
 import { Comment } from '../doc/Comment';
-import CommentModel from './models/commentModel';
+import CommentModel from '../models/commentModel';
 import { Document } from 'mongoose';
 
 export const getAll = async (): Promise<Comment[]> =>
